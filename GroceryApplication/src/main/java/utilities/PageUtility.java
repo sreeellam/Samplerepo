@@ -1,0 +1,46 @@
+package utilities;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class PageUtility
+{
+
+	public void selectDropdownWithValue(WebElement element, String value)
+	{
+		Select object=new Select(element);
+		object.selectByValue(value);
+	}
+	public void selectDropdownByIndex(WebElement element, String value)
+	{
+		Select object=new Select(element);
+		object.selectByIndex(0);
+	}
+	public void selectDropdownByVisibleText(WebElement element, String value)
+	{
+		Select object=new Select(element);
+		object.selectByVisibleText(value);
+	}
+	public void click(WebDriver driver)
+	{
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click;","element");
+	}
+	public void scrollPage(WebDriver driver, WebElement element) 
+	{
+		driver.navigate().to("https://groceryapp.uniqassosiates.com");
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollTo(0, 150)","");
+	 
+	}
+	
+	/*public void scrollDown() 
+	{
+
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(0, 150);"); 
+	}*/
+}
