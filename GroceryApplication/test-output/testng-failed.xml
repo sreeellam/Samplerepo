@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="mainproject.LoginTest">
+      <class name="mainproject.ManageDeliveryBoyTest">
         <methods>
-          <include name="userLoginwithInvalidPassword"/>
+          <include name="verifyWhetherUserableToAddDeliveryBoyDetails"/>
           <include name="closeBrowser"/>
           <include name="browserInitialization"/>
         </methods>
-      </class> <!-- mainproject.LoginTest -->
+      </class> <!-- mainproject.ManageDeliveryBoyTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
